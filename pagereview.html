@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Jaruk Nattayakun</title>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>CSS syntax</th>
+                <th>CSS writing</th>
+                <th>selector</th>
+                <th>combinator</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>CSS syntax ประกอบไปด้วย
+                    <ol>
+                        <li>seletor คือ ส่วนของ HTML tag ที่ต้องการให้มีรูปแบบตามที่กำหนด</li>
+                        <li>property คือ ส่วนของคุณสมบัติที่เราต้องการให้แสดง เช่น สีตัวอักษร สีพื้นหลัง ขนาดตัวอักษร
+                        </li>
+                        <li>value คือ ค่าของ property ที่เราต้องการให้แสดงเช่น ตัวหนังสือสีแดง พื้นหลังสีเทา
+                            ขนาดตัวอักษร 16px</li>
+                    </ol>
+                </td>
+                <td>การเขียน CSS มีอยู่ 3 แบบ
+                    <ol>
+                        <li>External CSS เป็นการเขียน CSS แยกต่างหากจากไฟล์ html แล้วเรียกไฟล์มาใช้งาน</li>
+                        <li>Internal CSS เป็นการแยกโค๊ด CSS ออกจาก tag HTML แต่อยู่ในไฟล์เดียวกันกับ HTML
+                            โดยแทรกไว้ที่ส่วน head</li>
+                        <li>Inline CSS เป็นการแทรกโค๊ด CSS ลงไปใน tag นั้นๆของ HTML</li>
+                    </ol>
+                </td>
+                <td>selector คือ HTML elements หรือ elements ที่ CSS rule ที่นำไปใช้งาน มีอยู่ด้วยกัน 2 แบบ
+                    <ol>
+                        <li>Class Selectors เป็นการเรียกใช้ selectors แบบ class โดยชื่อ class
+                            จะตั้งชื่อขึ้นต้นด้วยเครื่องหมาย . แล้วตามด้วยตัวอักษร ตัวเลข เครื่องหมาย-,_
+                            เท่านั้นห้ามมีช่องว่าง</li>
+                        <li>ID Selectors เป็นการเรียกใช้ selectors แบบ ID โดยชื่อ ID จะขึ้นต้นด้วยเครื่องหมาย #
+                            แล้วตามด้วยตัวอักษร ตัวเลข เครื่องหมาย-,_ เท่านั้นห้ามมีช่องว่าง/li>
+                    </ol>
+                </td>
+                <td>การกำหนดเงื่อนไขระหว่าง 2 selector
+                    <ol>
+                        <li>Descendant Selector คือ tag ที่อยู่ ภายใต้ tag จะทำงานทั้งหมด</li>
+                        <li>Child selector คือ tag ลูกที่อยู่ภายใน tag แม่ แค่ชั้นเดียว</li>
+                        <li></li>
+                        <li></li>
+                    </ol>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <h2>For example css syntax</h2>
+    <p>table { width: 100%; } กำหนดให้ table มีความกว้าง 100%</p>
+    <h2>For example css writing</h2>
+    <ol>
+        <li>External CSS <xmp>
+
+                <head>
+                    <link rel="stylesheet" type="text/css" href="mystyle.css">
+                </head>
+            </xmp> mystyle.css คือชื่อไฟล์ css ที่เราเรียกมาใช้งานเพื่อกำหนดรูปแบบให้กับ html</li>
+        <li>Internal CSS <xmp>
+
+                <head>
+                    <style>
+                        body {
+                            background-color: #FF9933;
+                        }
+
+                        h1 {
+                            color: #fff;
+                            margin-left: 40px;
+                        }
+                    </style>
+                </head>
+            </xmp>
+        </li>
+        <li>
+            <xmp>
+                <h2 style="font-size: 30px; color: red;">Show Inline CSS</h2>
+            </xmp>
+            <h2 style="font-size: 50px; color: red;">Show Inline CSS</h2>
+        </li>
+    </ol>
+    <h2>For selectors example Case</h2>
+    <h3>Class Selectors</h3>
+    <p>
+        <xmp>.text-header{
+            color: #3399FF;
+            margin: 0 100px;
+            }</xmp>
+    </p>
+    <xmp>
+        <h2 class="text-header">For selectors example Case</h2>
+    </xmp>
+    <h2 class="text-header">For selectors example Case</h2>
+    <hr>
+    <h3>ID Selectors</h3>
+    <xmp>#bg-color{
+        background-color: yellow;
+        }
+        <p id="bg-color">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, nostrum.</p>
+    </xmp>
+    <p id="bg-color">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, nostrum.</p>
+    <h2>For Combinators</h2>
+    <h3>Descendant Selector</h3>
+    <xmp>
+        CSS
+        div p {
+        background-color: orangered;
+        }
+
+        HTML
+        <div>
+            <p>Paragraph 1 in the div.</p>
+            <p>Paragraph 2 in the div.</p>
+            <h3>
+                <p>Paragraph 3 in the div.</p>
+            </h3>
+        </div>
+    </xmp>
+    <div class="desc">
+        <p>Paragraph 1 in the div.</p>
+        <p>Paragraph 2 in the div.</p>
+        <h3>
+            <p>Paragraph 3 in the div.</p>
+        </h3>
+    </div>
+    <h3>Child selector</h3>
+    <xmp>
+        CSS
+        div > p {
+            background-color: yellow;
+        }
+
+        HTML
+        <div>
+            <p>Paragraph 1 in the div.</p>
+            <p>Paragraph 2 in the div.</p>
+            <h3>
+                <p>Paragraph 3 in the div.</p>
+            </h3> <!-- not Child but Descendant -->
+            <p>Paragraph 4 in the div.</p>
+        </div>
+    </xmp>
+
+
+    <div class="child">
+        <p>Paragraph 1 in the div.</p>
+        <p>Paragraph 2 in the div.</p>
+        <h3>
+            <p>Paragraph 3 in the div.</p>
+        </h3> <!-- not Child but Descendant -->
+        <p>Paragraph 4 in the div.</p>
+    </div>
+
+</body>
+
+</html>

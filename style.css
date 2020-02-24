@@ -1,0 +1,35 @@
+body{
+    font-size: 16px;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+table, th, td{
+    border: 1px solid #000;
+}
+th{
+    font-size: 22px;
+}
+td{
+    font-size: 18px;
+}
+th, td{
+    padding: 5px;
+}
+
+.text-header{
+    color: #3399FF;
+    margin: 0 100px; 
+}
+#bg-color{
+    background-color: yellow;
+}
+
+div.desc p {
+    background-color: orangered;
+  }
+
+div.child > p {
+    background-color: yellow;
+}
