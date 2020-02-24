@@ -138,7 +138,7 @@
     <xmp>
         CSS
         div > p {
-            background-color: yellow;
+        background-color: yellow;
         }
 
         HTML
@@ -161,33 +161,33 @@
     </div>
     <h3>Adjacent Sibling Selector</h3>
     <xmp>
-    CSS
-    div + p {
+        CSS
+        div + p {
         background-color: blueviolet;
-    }
-    HTML
-    <div>
-        <p>Paragraph 1 in the div.</p>
-        <p>Paragraph 2 in the div.</p>
-    </div>
-      
-      <p>Paragraph 3. Not in a div.</p>
-      <p>Paragraph 4. Not in a div.</p>
+        }
+        HTML
+        <div>
+            <p>Paragraph 1 in the div.</p>
+            <p>Paragraph 2 in the div.</p>
+        </div>
+
+        <p>Paragraph 3. Not in a div.</p>
+        <p>Paragraph 4. Not in a div.</p>
     </xmp>
     <div class="adjacent">
         <p>Paragraph 1 in the div.</p>
         <p>Paragraph 2 in the div.</p>
     </div>
-      
-      <p>Paragraph 3. Not in a div.</p>
-      <p>Paragraph 4. Not in a div.</p>
+
+    <p>Paragraph 3. Not in a div.</p>
+    <p>Paragraph 4. Not in a div.</p>
     <h3>General Sibling Selector</h3>
     <xmp>
-    CSS
-    div ~ p {
+        CSS
+        div ~ p {
         background-color: chartreuse;
-    }
-    HTML
+        }
+        HTML
         <p>Paragraph 1.</p>
 
         <div class="general">
@@ -199,16 +199,51 @@
         <p>Paragraph 4.</p>
         <p>Paragraph 5.</p>
     </xmp>
-        <p>Paragraph 1.</p>
+    <p>Paragraph 1.</p>
 
-        <div class="general">
-            <p>Paragraph 2.</p>
-        </div>
+    <div class="general">
+        <p>Paragraph 2.</p>
+    </div>
 
-        <p>Paragraph 3.</p>
-        <h2>Tag H2</h2>
-        <p>Paragraph 4.</p>
-        <p>Paragraph 5.</p>
+    <p>Paragraph 3.</p>
+    <h2>Tag H2</h2>
+    <p>Paragraph 4.</p>
+    <p>Paragraph 5.</p>
+    <hr>
+    <h2>answer</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>property</th>
+                <th>value</th>
+                <th>unit</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <ul>
+                        <li>border-radius ขอบโค้ง</li>
+                        <li>box-shadow เงาที่กล่อง</li>
+                        <li>background-image ใช้กำหนดพื้นหลังเป็นรูปภาพ</li>
+                        <li>display ใช้กำหนดรูปแบบการจัดวางข้อมูล</li>
+                    </ul>
+                </td>
+                <td>
+                    ค่าที่กำหนดลงไปเพื่อให้แสดงผลตามที่ต้องการ เช่น สีตัวอักษร รูปแบบตัวอักษร
+                </td>
+                <td>หน่วยของค่าที่เรากำหนด
+                    <ul>
+                        <li>px พิกเซล 1/96 นิ้ว</li>
+                        <li>em เท่าขนาดฟอนต์ของ element</li>
+                        <li>rem เป็น relative ที่ขึ้นอยู่กับขนาดของ root element</li>
+                        <li>vh เปอร์เซ็นความสูงหน้าจอ</li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
 </body>
 
 </html>
