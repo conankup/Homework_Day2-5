@@ -33,3 +33,9 @@ div.desc p {
 div.child > p {
     background-color: yellow;
 }
+div.adjacent + p {
+    background-color: blueviolet;
+}
+div.general ~ p {
+    background-color: chartreuse;
+}

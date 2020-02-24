@@ -50,8 +50,8 @@
                     <ol>
                         <li>Descendant Selector คือ tag ที่อยู่ ภายใต้ tag จะทำงานทั้งหมด</li>
                         <li>Child selector คือ tag ลูกที่อยู่ภายใน tag แม่ แค่ชั้นเดียว</li>
-                        <li></li>
-                        <li></li>
+                        <li>Adjacent Sibling Selector จะทำงานที่ tag แรกที่วางต่อจาก tag element ก่อนหน้า</li>
+                        <li>General Sibling Selector จะทำงานที่ tag ทุกตัวที่วางต่อจาก tag element ก่อนหน้า</li>
                     </ol>
                 </td>
             </tr>
@@ -151,8 +151,6 @@
             <p>Paragraph 4 in the div.</p>
         </div>
     </xmp>
-
-
     <div class="child">
         <p>Paragraph 1 in the div.</p>
         <p>Paragraph 2 in the div.</p>
@@ -161,7 +159,56 @@
         </h3> <!-- not Child but Descendant -->
         <p>Paragraph 4 in the div.</p>
     </div>
+    <h3>Adjacent Sibling Selector</h3>
+    <xmp>
+    CSS
+    div + p {
+        background-color: blueviolet;
+    }
+    HTML
+    <div>
+        <p>Paragraph 1 in the div.</p>
+        <p>Paragraph 2 in the div.</p>
+    </div>
+      
+      <p>Paragraph 3. Not in a div.</p>
+      <p>Paragraph 4. Not in a div.</p>
+    </xmp>
+    <div class="adjacent">
+        <p>Paragraph 1 in the div.</p>
+        <p>Paragraph 2 in the div.</p>
+    </div>
+      
+      <p>Paragraph 3. Not in a div.</p>
+      <p>Paragraph 4. Not in a div.</p>
+    <h3>General Sibling Selector</h3>
+    <xmp>
+    CSS
+    div ~ p {
+        background-color: chartreuse;
+    }
+    HTML
+        <p>Paragraph 1.</p>
 
+        <div class="general">
+            <p>Paragraph 2.</p>
+        </div>
+
+        <p>Paragraph 3.</p>
+        <h2>Tag H2</h2>
+        <p>Paragraph 4.</p>
+        <p>Paragraph 5.</p>
+    </xmp>
+        <p>Paragraph 1.</p>
+
+        <div class="general">
+            <p>Paragraph 2.</p>
+        </div>
+
+        <p>Paragraph 3.</p>
+        <h2>Tag H2</h2>
+        <p>Paragraph 4.</p>
+        <p>Paragraph 5.</p>
 </body>
 
 </html>
